@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./tarefa.component.css']
 })
 export class TarefaComponent {
-  // Aqui está o input que você precisa
   @Input() tarefa!: Tarefa;
 
   // Esses são os eventos emitidos para o componente pai
