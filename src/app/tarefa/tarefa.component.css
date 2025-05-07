@@ -1,0 +1,28 @@
+.tarefa-container {
+    background-color: #f1f1f1;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .tarefa-container span {
+    flex: 1;
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  .concluida {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  

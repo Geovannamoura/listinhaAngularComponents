@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Lista de Tarefas</h2>
+    
+    <div class="input-area">
+      <input [(ngModel)]="novaTarefa" placeholder="Digite a tarefa..." />
+      <button (click)="adicionarTarefa()">Adicionar</button>
+    </div>
+  
+    <div *ngFor="let tarefa of tarefas; let i = index">
+      <app-tarefa
+        [tarefa]="tarefa"
+        (remover)="removerTarefa(i)"
+        (alternar)="alternarConclusao(tarefa)">
+      </app-tarefa>
+    </div>
+  </div>
+  

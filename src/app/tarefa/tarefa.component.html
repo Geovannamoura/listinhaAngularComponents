@@ -1,0 +1,16 @@
+<div class="tarefa-container">
+  <input type="checkbox" [checked]="tarefa.concluida" (change)="alternar.emit()" />
+
+  <ng-container *ngIf="!tarefa.emEdicao; else edicao">
+    <span [class.concluida]="tarefa.concluida">{{ tarefa.titulo }}</span>
+    <button (click)="tarefa.emEdicao = true">Editar</button>
+  </ng-container>
+
+  <ng-template #edicao>
+    <input [(ngModel)]="tarefa.titulo" />
+    <button (click)="tarefa.emEdicao = false">Salvar</button>
+  </ng-template>
+
+  <button (click)="remover.emit()">Remover</button>
+</div>
+
